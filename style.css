@@ -1,0 +1,70 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+.menu {
+  background-color: #000000;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.profile {
+  position: absolute;
+  left: 45%;
+  top: 35%;
+  width: 45%;
+  text-align: left;
+  color: black;
+  display: inline-block;
+  opacity: 100 !important;
+}
+.profile-pic {
+  position: absolute;
+  left: 25%;
+  top: 35%;
+  width: 100%;
+  text-align: left;
+  color: #000;
+  display: inline-block;
+  border-radius: 100%;
+  max-width: 15%;
+  opacity: 1 !important;
+}
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.paralax1,
+.paralax2 {
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+.paralax1 {
+  background-image: url("./resources/background/paralax1.jpg");
+  min-height: 100%;
+}
+
+.paralax2 {
+  background-image: url("./resources/background/paralax2.jpg");
+  min-height: 100%;
+}
+
+@media only screen and (max-devide-width: 1024px) {
+  .paralax {
+    background-attachment: scroll;
+  }
+}
