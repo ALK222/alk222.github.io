@@ -10,11 +10,20 @@
   </head>
   <body>
     <div class="menu">
-      <a>Español</a>
-      <div class="switch">
-        <input type="checkbox" /> <span class="slider round"></span>
+      <div class="language-switch">
+        <input
+          type="checkbox"
+          name="language-switch"
+          class="language-switch-checkbox"
+          id="mylanguage-switch"
+          tabindex="0"
+          checked
+        />
+        <label class="language-switch-label" for="mylanguage-switch">
+          <span class="language-switch-inner"></span>
+          <span class="language-switch-switch"></span>
+        </label>
       </div>
-      <a>Inglés</a>
     </div>
     <div class="paralax1"></div>
     <div class="caption">

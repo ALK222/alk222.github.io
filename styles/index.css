@@ -84,63 +84,80 @@ li a {
   min-height: 100%;
 }
 
-.switch {
+.language-switch {
   position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
-
-.switch input {
+.language-switch-checkbox {
+  position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  pointer-events: none;
 }
-
-.slider {
-  position: absolute;
+.language-switch-label {
+  display: block;
+  overflow: hidden;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  border: 2px solid #999999;
+  border-radius: 20px;
 }
-
-.slider:before {
+.language-switch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.language-switch-inner:before,
+.language-switch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 12px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.language-switch-inner:before {
+  content: "SPANISH";
+  padding-left: 8px;
+  background-color: #eeeeee;
+  color: #999999;
+}
+.language-switch-inner:after {
+  content: "ENGLISH";
+  padding-right: 8px;
+  background-color: #eeeeee;
+  color: #999999;
+  text-align: right;
+}
+.language-switch-switch {
+  display: block;
+  width: 12px;
+  margin: 9px;
+  background: #ffffff;
   position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
 }
-
-input:checked + .slider {
-  background-color: #2196f3;
+.language-switch-checkbox:checked
+  + .language-switch-label
+  .language-switch-inner {
+  margin-left: 0;
 }
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+.language-switch-checkbox:checked
+  + .language-switch-label
+  .language-switch-switch {
+  right: 0px;
 }
 
 @media only screen and (max-devide-width: 1024px) {
