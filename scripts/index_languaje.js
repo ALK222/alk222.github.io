@@ -1,17 +1,23 @@
 var lang = "es";
 
+function loadLanguage(lg) {
+  lang = lg;
+  var lj = `../languages/${lg}.json`; // load dictionary for specific language
+  $.getJSON(lj, function (id) {
+    // load the json file
+    $("#spanish").text(id.spanish); // load all language changes
+    $("#english").text(id.english);
+    $("#title").text(id.title);
+    $("#about_me").text(id.about_me);
+    $("#language-switch-inner").attr("content-before", id.spanish);
+    $("#language-switch-inner").attr("content-after", id.english);
+  });
+}
+
 function changeLanguage() {
   if (lang === "es") {
-    $.getJSON("en.json", function (en) {
-      //$("#about_me").text(en.about_me);
-    });
-    lang = "en";
+    loadLanguage("en");
   } else {
-    $("p").empty().append("es.about_me");
-    $.getJSON("es.json", function (es) {
-      $("p").empty().append("yay");
-    });
-    $.getJSON("url", data, function (data, textStatus, jqXHR) {});
-    lang = "es";
+    loadLanguage("es");
   }
 }

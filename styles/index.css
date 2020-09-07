@@ -39,7 +39,7 @@ li a {
   top: 35%;
   width: 45%;
   text-align: left;
-  color: black;
+  color: white;
   display: inline-block;
   opacity: 100 !important;
 }
@@ -71,8 +71,6 @@ li a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 120%;
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
 }
 .paralax1 {
   background-image: url("../resources/background/paralax1.jpg");
