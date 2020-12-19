@@ -159,9 +159,18 @@ li a {
   right: 0px;
 }
 
-@media only screen and (max-devide-width: 1024px) {
-  .paralax {
+@media screen and (max-width: 1080px) {
+  .paralax1 {
     background-attachment: scroll;
+    background-image: linear-gradient(
+      to top,
+      rgba(34, 103, 252, 0.315),
+      rgb(87, 0, 128)
+    );
+  }
+  .paralax2 {
+    background-attachment: scroll;
+    background-image: linear-gradient(to top, rgb(133, 0, 0), rgb(128, 109, 0));
   }
 }
 
