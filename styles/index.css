@@ -75,6 +75,7 @@ li a {
 .paralax1 {
   background-image: url("../resources/background/paralax1.jpg");
   min-height: 100%;
+  height: 100vh;
 }
 
 .paralax2 {
@@ -162,4 +163,44 @@ li a {
   .paralax {
     background-attachment: scroll;
   }
+}
+
+.sidebar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 120px;
+  text-align: center;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 10, /Users/ick.kramer/code/resume/source/stylesheets/layouts/_sidebar.scss */
+.sidebar ul {
+  list-style: none;
+  padding: 0px;
+}
+/* line 14, /Users/ick.kramer/code/resume/source/stylesheets/layouts/_sidebar.scss */
+.sidebar li {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+/* line 18, /Users/ick.kramer/code/resume/source/stylesheets/layouts/_sidebar.scss */
+.sidebar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ededed;
+  font-weight: 400;
+}
+/* line 24, /Users/ick.kramer/code/resume/source/stylesheets/layouts/_sidebar.scss */
+.sidebar a:hover {
+  color: rgba(67, 144, 168, 0.9);
+}
+
+/* line 31, /Users/ick.kramer/code/resume/source/stylesheets/layouts/_sidebar.scss */
+.sidebar.fixed {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }
