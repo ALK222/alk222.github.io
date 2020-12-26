@@ -1,6 +1,5 @@
-body,
-html {
-  height: 100%;
+body {
+  margin: 0; /* This is used to reset any browser-default margins */
 }
 * {
   box-sizing: border-box;
@@ -10,11 +9,10 @@ html {
   background-image: url("../resources/background/404.svg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 110%;
-  width: 110%;
   filter: blur(2px);
+  height: 100vh;
   -webkit-filter: blur(2px);
-  transform: scale(1.1);
+  padding: 10px 10px;
 }
 
 .error-text {
@@ -24,11 +22,20 @@ html {
   font-weight: bold;
   border: 3px solid #f1f1f1;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 80%;
   padding: 20px;
   text-align: center;
+}
+
+.home-button {
+  border-radius: 15px;
+  border: 0px;
+  font-size: small;
+}
+.home-button:hover {
+  background-color: #bd93f9;
 }
