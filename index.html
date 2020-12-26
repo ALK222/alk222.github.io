@@ -2,11 +2,18 @@
 <html lang="es">
   <head>
     <link rel="stylesheet" type="text/css" href="styles/index.css" />
-    <title id="title">Página de Alejandro Barrachina</title>
-      <link rel="shortcut icon" href="resources/favicon.png" type="image/x-icon">
-      <link rel="icon" href="resources/favicon.png" type="image/x-icon">
-      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script>
+    <title id="title"></title>
+    <link
+      rel="shortcut icon"
+      href="resources/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="resources/favicon.png" type="image/x-icon" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
     <script
       type="text/javascript"
       language="javascript"
@@ -19,7 +26,7 @@
     ></script>
     <script src="scripts/index_languaje.js"></script>
   </head>
-  <body>
+  <body onload="loadLanguage()">
     <!--Horizontal menu-->
     <div class="menu">
       <div class="language-switch">
@@ -38,23 +45,7 @@
         </label>
       </div>
     </div>
-    <!--Vertical menu-->
-    <div class="sidebar hidden-xs">
-      <ul>
-        <li><a href="#home"><img src="images/logo-white.png" alt="Home" width="32" style="
-           opacity: 0.8;"></a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#resume">RESUME</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li><b><a href="https://nl.linkedin.com/in/iris-kramer-5626a191"><i class="fa fa-linkedin"></i></a></b></li>
-        <li><a href="https://github.com/ickramer"><i class="fa fa-github-alt"></i></a></li>
-        <li><a href="https://twitter.com/ickkramer"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="https://soton.academia.edu/IrisKramer"><i class="fa fa-graduation-cap"></i></a></li>
-        <li><a href="http://www.slideshare.net/IrisKramer"><i class="fa fa-slideshare"></i></a></li>
-      </ul>
-    </div>
+
     <!--First Zone-->
     <div class="paralax1"></div>
     <div class="caption">
@@ -73,9 +64,9 @@
         text-align: justify;
       "
     >
-    <!--First Separator-->
-      <h3 style="text-align: center">Sobre mi</h3>
-      <p class="about_me" id="about_me">Estudiante de ingeniería informática en la UCM. Apasionado de los videojuegos, la programación y casi cualquier campo de la informática</p>
+      <!--First Separator-->
+      <h3 style="text-align: center"></h3>
+      <p class="about_me" id="about_me"></p>
     </div>
     <!--Second Zone-->
     <div class="paralax2">

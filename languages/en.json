@@ -2,5 +2,9 @@
   "title": "Alejandro Barrachina's Portfolio",
   "spanish": "Spanish",
   "english": "English",
-  "about_me": "Future's Alex work. Make it shine"
+  "about_me": "Future's Alex work. Make it shine",
+  "title_404": "404 Page not found",
+  "err_msj": "404 page not found",
+  "desc_404": "The page you were looking for does not exist, or might just escaped from this server because it was too boring, no one knows",
+  "home_button_404": "Go to home page"
 }

@@ -4,31 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>404 page not found</title>
+    <title id="title"></title>
 
     <link href="./styles/404.css" rel="stylesheet" />
 
     <script
       type="text/javascript"
-      src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=gNTfMeJ-Jjw4wUTYaRlRCvnUE2_8ENK4QX1pBWtSg1MTwlPS9p-vdczD7zt-NE_WEUczQgwdFvb4-fR4NPjQGg"
+      src="./scripts/404_language.js"
       charset="UTF-8"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
     ></script>
   </head>
 
-  <body>
+  <body onload="change404language()">
     <div class="back-image"></div>
     <div class="error-text">
-      <h1>404 page not found</h1>
-      <p>
-        The page you tried to search doesn't exist, or got lost on the internet.
-      </p>
+      <h1 id="err_msj"></h1>
+      <p id="desc"></p>
       <button
         type="button"
         class="home-button"
+        id="home-button"
         onclick="location.href='https://alk222.github.io'"
-      >
-        Go to home page
-      </button>
+      ></button>
       <p class="designed-by">
         <a href="https://alk222.github.io">@ALK222</a>
       </p>

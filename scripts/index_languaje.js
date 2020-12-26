@@ -21,3 +21,22 @@ function changeLanguage() {
     loadLanguage("es");
   }
 }
+
+function loadLanguage() {
+  var lj = `../languages/es.json`;
+  if (!window.navigator.language.includes("es-")) {
+    lj = `../languages/en.json`; // load dictionary for specific language
+  }
+  $.getJSON(lj, function (id) {
+    // load the json file
+    $.getJSON(lj, function (id) {
+      // load the json file
+      $("#spanish").text(id.spanish); // load all language changes
+      $("#english").text(id.english);
+      $("#title").text(id.title);
+      $("#about_me").text(id.about_me);
+      $("#language-switch-inner").attr("content-before", id.spanish);
+      $("#language-switch-inner").attr("content-after", id.english);
+    });
+  });
+}
