@@ -7,5 +7,14 @@
         "markdown",
         "latex"
     ],
-    "problems.decorations.enabled": false
+    "problems.decorations.enabled": false,
+    "liveSassCompile.settings.formats": [
+  
+        {
+          "format": "expanded",
+          "extensionName": ".css",
+          "savePath": "/css",
+          "savePathReplacementPairs": null
+        }
+      ]
 }
