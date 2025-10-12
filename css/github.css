@@ -1,0 +1,121 @@
+/* =======================
+   GitHub Styles
+======================= */
+/* GitHub Repo Cards Styles */
+.repo-card {
+  border: 1px solid var(--neon-blue);
+  background: rgba(0, 20, 40, 0.7);
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  height: fit-content;
+  cursor: pointer;
+}
+
+.repo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+  transition: left 0.5s ease;
+}
+
+.repo-card-wrapper:hover .repo-card::before {
+  left: 100%;
+}
+
+.repo-card-wrapper:hover .repo-card {
+  border-color: var(--neon-pink);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+}
+
+.repo-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--neon-blue);
+  transition: color 0.3s ease;
+}
+
+.repo-card-wrapper:hover .repo-name {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.repo-description {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  min-height: 2.8rem;
+}
+
+.repo-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #888;
+  flex-wrap: wrap;
+}
+
+.repo-language {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Repo card wrapper (clickable link) */
+.repo-card-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.repo-card-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+/* Click hint indicator */
+.repo-click-hint {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--neon-blue);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.repo-card-wrapper:hover .repo-click-hint {
+  opacity: 1;
+}
+
+.loading-repos {
+  text-align: center;
+  padding: 2rem;
+  color: var(--neon-blue);
+  grid-column: 1 / -1;
+}
+
+.error-repos {
+  text-align: center;
+  padding: 2rem;
+  color: var(--neon-pink);
+  grid-column: 1 / -1;
+}

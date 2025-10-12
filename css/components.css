@@ -1,0 +1,91 @@
+/* =======================
+   Cards, Buttons & Forms
+======================= */
+.card {
+  background: #222;
+  border: 1px solid var(--border-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 15px var(--neon-pink);
+}
+
+.btn {
+  background: var(--neon-pink);
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover { 
+  background: #ff3355; 
+}
+
+input, textarea {
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  padding: 0.6rem;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+
+/* =======================
+   Modal
+======================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.modal.active { 
+  display: flex; 
+}
+
+.modal-content {
+  background: #111;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--neon-pink);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* =======================
+   Scroll Indicator
+======================= */
+.scroll-indicator {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--neon-pink);
+  text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+  animation: pulse 1.5s infinite;
+  z-index: 999;
+  pointer-events: auto;
+}

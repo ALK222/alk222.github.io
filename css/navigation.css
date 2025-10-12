@@ -1,0 +1,103 @@
+/* =======================
+   Navigation & Language
+======================= */
+nav {
+  position: fixed;
+  top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 1000;
+  background: transparent;
+  padding: 0 1rem;
+}
+
+/* Wrap buttons to center them as a group */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Individual buttons */
+nav button {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border: 2px solid var(--neon-red);
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-shadow: none;
+}
+
+nav button:hover {
+  background: var(--bg-primary);
+  box-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red), 0 0 30px var(--neon-red);
+  transform: scale(1.05);
+}
+
+/* Remove active effect on hover */
+nav button.active:hover::before,
+nav button.active:hover::after {
+    display: none;
+}
+
+/* Keep the normal hover effect */
+nav button.active:hover {
+    background: var(--bg-primary);
+    border: 2px solid var(--neon-red);
+    box-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red), 0 0 30px var(--neon-red);
+    transform: scale(1.05);
+}
+
+nav button.active {
+    position: relative;
+    overflow: unset;
+}
+
+nav button.active::before,
+nav button.active::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    background: var(--bg-primary);
+    background-image: linear-gradient(45deg, #ff0033, #e0287d, #ff3366, #cc0022, #ff6666, #ff0033, #e0287d, #ff3366, #cc0022, #ff6666, #ff0033, #e0287d, #ff3366, #cc0022);
+    background-size: 500%;
+    animation: position 30s linear infinite alternate;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+nav button.active::after {
+    filter: blur(10px);
+}
+
+/* Language Toggle */
+nav select#langSelect {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border: 2px solid var(--neon-red);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  appearance: none;
+  text-align: center;
+}
+
+/* Remove glow effects on hover/focus */
+nav select#langSelect:hover,
+nav select#langSelect:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: var(--neon-red);
+  transform: none;
+}

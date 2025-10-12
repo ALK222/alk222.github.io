@@ -1,0 +1,114 @@
+/* =======================
+   Sections & Grid Layout
+======================= */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  scroll-snap-align: start;
+  position: relative;
+  padding: 20px;
+}
+
+/* Hero Section Layout */
+.hero-container.about-flex {
+  display: flex;
+  align-items: stretch;
+  gap: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.github-logo {
+  display: flex;
+  align-items: center;
+}
+
+.github-logo img {
+  height: 100%;
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* GitHub Repo Rows Layout */
+.repo-rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.repo-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Ensure the projects grid can accommodate the rows */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Original project cards styling */
+.projects-grid > .card:not(.repo-card) {
+  grid-column: 1 / -1;
+}
+
+/* =======================
+   Section Spacing
+======================= */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  scroll-snap-align: start;
+  position: relative;
+  padding: 120px 20px 20px; /* Increased top padding for nav space */
+  overflow-y: auto;
+}
+
+/* Projects section specific layout */
+#projects {
+  padding-top: 140px; /* Extra space for the heading */
+}
+
+#projects .projects-grid {
+  margin-top: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,45 @@
+/* =======================
+   CSS Variables & Reset
+======================= */
+:root {
+  --neon-blue: #00ffff;
+  --neon-pink: #e0287d;
+  --neon-red: #ff0033;
+  --bg-primary: #000000;
+  --bg-secondary: #1a0000;
+  --bg-tertiary: #2a0000;
+  --text-primary: #ccc;
+  --text-secondary: #fff;
+  --border-primary: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-snap-type: y mandatory;
+  height: 100%;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  font-family: sans-serif;
+  margin: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 0;
+}
+
+h1, h2 { 
+  margin: 0; 
+}
+
+a { 
+  color: var(--text-primary); 
+  text-decoration: none; 
+}

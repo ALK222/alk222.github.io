@@ -1,0 +1,63 @@
+/* =======================
+   Cyberpunk Main Styles
+   Imports all other CSS files
+======================= */
+
+/* Import all CSS modules */
+@import url('base.css');
+@import url('layout.css');
+@import url('navigation.css');
+@import url('typography.css');
+@import url('components.css');
+@import url('animations.css');
+@import url('github.css');
+
+/* =======================
+   Background Effects
+======================= */
+body {
+  background: linear-gradient(120deg, var(--bg-primary), var(--bg-secondary), var(--bg-tertiary));
+  background-size: 400% 400%;
+  animation: bgShift 30s ease infinite;
+}
+
+/* Subtle moving grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 0, 50, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255, 0, 50, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: gridMove 12s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Overlay gradient for depth */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(0,0,0,0.9), rgba(255,0,50,0.05), rgba(20,0,0,0.9));
+  background-size: 400% 400%;
+  mix-blend-mode: overlay;
+  animation: bgShift 30s ease infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 0.8rem;
+  z-index: 100;
+}
