@@ -3,7 +3,7 @@
 // =======================
 const translations = {
   en: {
-    "title": "Alex Dev — Cyberpunk Portfolio",
+    "title": "Alex Barrachina",
     "nav.about": "About",
     "nav.projects": "Projects",
     "nav.cv": "CV",
@@ -29,7 +29,7 @@ const translations = {
     ]
   },
   es: {
-    "title": "Alex Dev — Portafolio Cyberpunk",
+    "title": "Alex Barrachina",
     "nav.about": "Acerca",
     "nav.projects": "Proyectos",
     "nav.cv": "CV",
