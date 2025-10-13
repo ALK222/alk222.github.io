@@ -16,27 +16,40 @@
 /* Hero Section Layout */
 .hero-container.about-flex {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .github-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .github-logo img {
-  height: 100%;
-  width: auto;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
 
+.github-logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
 .about-text {
+  flex: 1;
+  min-width: 300px;
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -44,31 +57,7 @@
   text-align: left;
 }
 
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-/* GitHub Repo Rows Layout */
-.repo-rows-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-  grid-column: 1 / -1;
-}
-
-.repo-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  width: 100%;
-}
-
-/* Ensure the projects grid can accommodate the rows */
+/* Consolidated Projects Grid */
 .projects-grid {
   display: flex;
   flex-direction: column;
@@ -78,21 +67,89 @@
   margin: 0 auto;
 }
 
-/* Original project cards styling */
-.projects-grid > .card:not(.repo-card) {
-  grid-column: 1 / -1;
+/* GitHub Repo Rows Layout */
+.repo-rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.repo-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Project Cards */
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Projects section specific layout */
 #projects {
-  padding-top: 140px; /* Extra space for the heading */
+  padding-top: 80px;
+  justify-content: flex-start;
+  padding-bottom: 2rem;
 }
 
-#projects .projects-grid {
-  margin-top: 2rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#projects .section-heading {
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-container.about-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .about-text {
+    text-align: center;
+    min-width: unset;
+  }
+  
+  .github-logo img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .repo-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  #projects {
+    padding-top: 100px;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 15px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .github-logo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .projects-grid {
+    gap: 2rem;
+  }
 }
