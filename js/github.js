@@ -21,7 +21,7 @@ function loadGitHubAvatar() {
     .catch(err => { 
       console.error('GitHub avatar load failed, using fallback:', err);
       // Fallback avatar
-      githubAvatar.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMjIyIi8+CjxwYXRoIGQ9Ik0xMDAgNTBDNzcuOTUgNTAgNjAgNjcuOTUgNjAgOTBDNjAgMTA5LjU0IDcxLjA1IDEyNi4zIDg3LjUgMTMxVjE0MkgxMTIuNVYxMzFDMTI4Ljk1IDEyNi4zIDE0MCAxMDkuNTQgMTQwIDkwQzE0MCA2Ny45NSAxMjIuMDUgNTAgMTAwIDUwWiIgZmlsbD0iI0UwMjg3RCIvPgo8L3N2Zz4K';
+      githubAvatar.src = '';
     });
 }
 
