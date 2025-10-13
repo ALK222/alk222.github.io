@@ -83,22 +83,6 @@
   grid-column: 1 / -1;
 }
 
-/* =======================
-   Section Spacing
-======================= */
-.section {
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  scroll-snap-align: start;
-  position: relative;
-  padding: 120px 20px 20px; /* Increased top padding for nav space */
-  overflow-y: auto;
-}
-
 /* Projects section specific layout */
 #projects {
   padding-top: 140px; /* Extra space for the heading */
