@@ -39,7 +39,7 @@ async function loadSVGIcon(skillName) {
         .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
         .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
     
-    const svgPath = `assets/svg/${cleanName}.svg`;
+    const svgPath = `../assets/svg/${cleanName}.svg`;
     
     // Check cache first
     if (svgCache.has(svgPath)) {

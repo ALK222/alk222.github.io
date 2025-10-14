@@ -101,9 +101,3 @@ nav select#langSelect:focus {
   border-color: var(--neon-red);
   transform: none;
 }
-
-@media (max-width: 768px) {
-  nav {
-    display: none;
-  }
-}
