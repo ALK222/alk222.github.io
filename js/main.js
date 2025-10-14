@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initGlitchAnimation();
   initGitHub();
   initModals();
+  // initCarousel();
   
   // Check initial scroll position
   setTimeout(() => {

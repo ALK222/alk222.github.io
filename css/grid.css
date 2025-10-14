@@ -1,0 +1,306 @@
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(10, 10, 30, 0.85);
+    border: 2px solid #00ffea;
+    border-radius: 12px;
+    box-shadow: 
+        0 0 25px rgba(0, 255, 234, 0.5),
+        inset 0 0 25px rgba(0, 255, 234, 0.1);
+    overflow: hidden;
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+    padding: 30px; 
+}
+
+/* Slide Header - CENTERED */
+.slide-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 255, 234, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+.slide-title {
+    font-size: 1.4rem; /* Smaller title size */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Reduced letter spacing */
+    text-shadow: 0 0 10px currentColor;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.category-languages .slide-title {
+    color: #ff6b6b;
+}
+
+.category-frameworks .slide-title {
+    color: #4ecdc4;
+}
+
+.category-tools .slide-title {
+    color: #ffe66d;
+}
+
+.slide-indicator {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem; /* Slightly smaller */
+    opacity: 0.7;
+    background: rgba(0, 255, 234, 0.1);
+    padding: 4px 10px; /* Smaller padding */
+    border-radius: 20px;
+    border: 1px solid #00ffea;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* Deep cut-corner slot */
+.skill-slot {
+    --b: 2px;
+    --s: 40px;
+    --c: #00ffea;
+    
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 15px;
+    
+    border: var(--b) solid var(--c);
+    border-radius: 8px;
+    clip-path: polygon(0 0, calc(100% - var(--s)) 0, 100% var(--s), 100% 100%, 0 100%);
+    background: linear-gradient(-135deg, var(--c) calc(0.707*var(--s) + var(--b)), transparent 0) border-box;
+    background-color: rgba(0, 255, 234, 0.05);
+}
+
+.skill-slot::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 234, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    clip-path: polygon(0 0, calc(100% - var(--s)) 0, 100% var(--s), 100% 100%, 0 100%);
+}
+
+.skill-slot:hover::before {
+    opacity: 1;
+}
+
+.skill-slot:hover {
+    box-shadow: 
+        0 0 15px var(--c),
+        inset 0 0 15px rgba(0, 255, 234, 0.1);
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 5px currentColor);
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.skill-level {
+    font-size: 0.7rem;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Category colors */
+.skill-slot[data-category="languages"] {
+    --c: #ff6b6b;
+    color: #ff6b6b;
+}
+
+.skill-slot[data-category="frameworks"] {
+    --c: #4ecdc4;
+    color: #4ecdc4;
+}
+
+.skill-slot[data-category="tools"] {
+    --c: #ffe66d;
+    color: #ffe66d;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 255, 234, 0.3);
+}
+
+.control-btn {
+    background: rgba(0, 255, 234, 0.1);
+    border: 2px solid #00ffea;
+    border-radius: 8px;
+    padding: 12px;
+    color: #00ffea;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background: rgba(0, 255, 234, 0.2);
+    box-shadow: 0 0 10px #00ffea;
+}
+
+.control-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #00ffea;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #00ffea;
+    box-shadow: 0 0 10px #00ffea;
+}
+
+/* Animation Classes */
+.skill-active {
+    box-shadow: 
+        0 0 20px currentColor,
+        inset 0 0 20px rgba(255, 255, 255, 0.2) !important;
+    filter: brightness(1.3);
+}
+
+/* Touch Support */
+.carousel-track {
+    touch-action: pan-y pinch-zoom;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-slide {
+        padding: 20px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        padding: 0 5px;
+    }
+    
+    .slide-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .slide-indicator {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+    
+    .carousel-controls {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .slide-title {
+        font-size: 1.2rem; /* Consistent smaller size */
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide {
+        padding: 15px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .slide-title {
+        font-size: 1.1rem; /* Even smaller on mobile */
+        letter-spacing: 1px;
+    }
+    
+    .carousel-controls {
+        padding: 15px;
+    }
+    
+    .slide-indicator {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+}
