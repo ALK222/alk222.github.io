@@ -20,7 +20,7 @@
   } 
   50% {
     opacity: 1; 
-    transform: translateX(-50%) translateY(10px);
+    transform: translateX(-50%) translateY(1.4vh);
   } 
 }
 
@@ -62,24 +62,24 @@
 
 @keyframes movement {
   0% {
-    top: 0px;
-    left: -2px;
+    top: 0vh;
+    left: -0.28vh;
   }
   15% {
-    top: 1px;
-    left: 1px;
+    top: 0.14vh;
+    left: 0.14vh;
   }
   60% {
-    top: 0.5px;
-    left: -1px;
+    top: 0.07vh;
+    left: -0.14vh;
   }
   75% {
-    top: -0.5px;
-    left: 2px;
+    top: -0.07vh;
+    left: 0.28vh;
   }
   100% {
-    top: 1px;
-    left: 0.5px;
+    top: 0.14vh;
+    left: 0.07vh;
   }
 }
 
@@ -110,53 +110,53 @@
 @keyframes shadow-color {
   0% {
     text-shadow: 
-      2px 0 var(--neon-pink),
-      4px 0 var(--neon-pink),
-      1px 1px var(--neon-pink),
-      -2px 0 var(--neon-blue),
-      -4px 0 var(--neon-blue),
-      -1px -1px var(--neon-blue);
-    filter: blur(1px);
+      0.28vh 0 var(--neon-pink),
+      0.56vh 0 var(--neon-pink),
+      0.14vh 0.14vh var(--neon-pink),
+      -0.28vh 0 var(--neon-blue),
+      -0.56vh 0 var(--neon-blue),
+      -0.14vh -0.14vh var(--neon-blue);
+    filter: blur(0.14vh);
   }
   20% {
     text-shadow: 
-      1px 0 var(--neon-pink),
-      3px 0 var(--neon-pink),
-      0px 1px var(--neon-pink),
-      -1px 0 var(--neon-blue),
-      -3px 0 var(--neon-blue),
-      0px -1px var(--neon-blue);
+      0.14vh 0 var(--neon-pink),
+      0.42vh 0 var(--neon-pink),
+      0vh 0.14vh var(--neon-pink),
+      -0.14vh 0 var(--neon-blue),
+      -0.42vh 0 var(--neon-blue),
+      0vh -0.14vh var(--neon-blue);
     filter: blur(0);
   }
   50% {
     text-shadow: 
-      3px 0 var(--neon-blue),
-      5px 0 var(--neon-blue),
-      2px 2px var(--neon-blue),
-      -3px 0 var(--neon-pink),
-      -5px 0 var(--neon-pink),
-      -2px -2px var(--neon-pink);
-    filter: blur(0.5px);
+      0.42vh 0 var(--neon-blue),
+      0.7vh 0 var(--neon-blue),
+      0.28vh 0.28vh var(--neon-blue),
+      -0.42vh 0 var(--neon-pink),
+      -0.7vh 0 var(--neon-pink),
+      -0.28vh -0.28vh var(--neon-pink);
+    filter: blur(0.07vh);
   }
   60% {
     text-shadow: 
-      2px 0 var(--text-secondary),
-      4px 0 var(--text-secondary),
-      1px 1px var(--text-secondary),
-      -2px 0 var(--text-secondary),
-      -4px 0 var(--text-secondary),
-      -1px -1px var(--text-secondary);
+      0.28vh 0 var(--text-secondary),
+      0.56vh 0 var(--text-secondary),
+      0.14vh 0.14vh var(--text-secondary),
+      -0.28vh 0 var(--text-secondary),
+      -0.56vh 0 var(--text-secondary),
+      -0.14vh -0.14vh var(--text-secondary);
     filter: blur(0);
   }
   90% {
     text-shadow: 
-      4px 0 var(--neon-pink),
-      6px 0 var(--neon-pink),
-      3px 3px var(--neon-pink),
-      -4px 0 var(--neon-blue),
-      -6px 0 var(--neon-blue),
-      -3px -3px var(--neon-blue);
-    filter: blur(1.5px);
+      0.56vh 0 var(--neon-pink),
+      0.84vh 0 var(--neon-pink),
+      0.42vh 0.42vh var(--neon-pink),
+      -0.56vh 0 var(--neon-blue),
+      -0.84vh 0 var(--neon-blue),
+      -0.42vh -0.42vh var(--neon-blue);
+    filter: blur(0.21vh);
   }
 }
 
@@ -188,5 +188,5 @@
 
 @keyframes gridMove {
   0% { background-position: 0 0, 0 0; }
-  100% { background-position: 160px 160px, 160px 160px; }
+  100% { background-position: 22.4vh 22.4vh, 22.4vh 22.4vh; }
 }

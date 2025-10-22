@@ -22,6 +22,7 @@
 html, body {
   scroll-snap-type: y mandatory;
   height: 100%;
+  width: 100%;
 }
 
 body {

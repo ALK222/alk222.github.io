@@ -28,9 +28,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 0, 51, 0.096) 1px, transparent 1px),
-    linear-gradient(rgba(255, 0, 51, 0.253) 1px, transparent 1px);
-  background-size: 80px 80px;
+    linear-gradient(90deg, rgba(255, 0, 51, 0.096) 0.14vh, transparent 0.14vh),
+    linear-gradient(rgba(255, 0, 51, 0.253) 0.14vh, transparent 0.14vh);
+  background-size: 11.2vh 11.2vh;
   animation: gridMove 12s linear infinite;
   z-index: 0;
   pointer-events: none;

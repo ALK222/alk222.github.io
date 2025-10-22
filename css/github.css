@@ -3,14 +3,14 @@
 ======================= */
 /* GitHub Repo Cards Styles */
 .repo-card {
-  border: 1px solid var(--neon-blue);
+  border: 0.14vh solid var(--neon-blue);
   background: rgba(0, 20, 40, 0.7);
-  border-radius: 8px;
+  border-radius: 1.12vh;
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(1.4vh);
   height: fit-content;
   cursor: pointer;
 }
@@ -32,8 +32,8 @@
 
 .repo-card-wrapper:hover .repo-card {
   border-color: var(--neon-pink);
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+  transform: translateY(-0.7vh);
+  box-shadow: 0 0.7vh 2.8vh rgba(0, 255, 255, 0.3);
 }
 
 .repo-name {
@@ -46,7 +46,7 @@
 
 .repo-card-wrapper:hover .repo-name {
   color: var(--neon-pink);
-  text-shadow: 0 0 10px var(--neon-pink);
+  text-shadow: 0 0 1.4vh var(--neon-pink);
 }
 
 .repo-description {
@@ -72,10 +72,10 @@
 }
 
 .language-color {
-  width: 12px;
-  height: 12px;
+  width: 1.68vh;
+  height: 1.68vh;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 0.14vh solid rgba(255, 255, 255, 0.3);
 }
 
 /* Repo card wrapper (clickable link) */
@@ -87,7 +87,7 @@
 }
 
 .repo-card-wrapper:hover {
-  transform: translateY(-2px);
+  transform: translateY(-0.28vh);
 }
 
 /* Click hint indicator */

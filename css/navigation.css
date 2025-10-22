@@ -25,8 +25,8 @@ nav {
 nav button {
   background: var(--bg-primary);
   color: var(--text-secondary);
-  border: 2px solid var(--neon-red);
-  border-radius: 8px;
+  border: 0.28vh solid var(--neon-red);
+  border-radius: 1.12vh;
   padding: 0.6rem 1.2rem;
   cursor: pointer;
   font-weight: bold;
@@ -36,7 +36,7 @@ nav button {
 
 nav button:hover {
   background: var(--bg-primary);
-  box-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red), 0 0 30px var(--neon-red);
+  box-shadow: 0 0 1.4vh var(--neon-red), 0 0 2.8vh var(--neon-red), 0 0 4.2vh var(--neon-red);
   transform: scale(1.05);
 }
 
@@ -49,8 +49,8 @@ nav button.active:hover::after {
 /* Keep the normal hover effect */
 nav button.active:hover {
     background: var(--bg-primary);
-    border: 2px solid var(--neon-red);
-    box-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red), 0 0 30px var(--neon-red);
+    border: 0.28vh solid var(--neon-red);
+    box-shadow: 0 0 1.4vh var(--neon-red), 0 0 2.8vh var(--neon-red), 0 0 4.2vh var(--neon-red);
     transform: scale(1.05);
 }
 
@@ -63,28 +63,28 @@ nav button.active::before,
 nav button.active::after {
     content: '';
     position: absolute;
-    left: -6px;
-    top: -6px;
-    width: calc(100% + 12px);
-    height: calc(100% + 12px);
+    left: -0.84vh;
+    top: -0.84vh;
+    width: calc(100% + 1.68vh);
+    height: calc(100% + 1.68vh);
     background: var(--bg-primary);
     background-image: linear-gradient(45deg, #ff0033, #e0287d, #ff3366, #cc0022, #ff6666, #ff0033, #e0287d, #ff3366, #cc0022, #ff6666, #ff0033, #e0287d, #ff3366, #cc0022);
     background-size: 500%;
     animation: position 30s linear infinite alternate;
     z-index: -1;
-    border-radius: 10px;
+    border-radius: 1.4vh;
 }
 
 nav button.active::after {
-    filter: blur(10px);
+    filter: blur(1.4vh);
 }
 
 /* Language Toggle */
 nav select#langSelect {
   background: var(--bg-primary);
   color: var(--text-secondary);
-  border: 2px solid var(--neon-red);
-  border-radius: 8px;
+  border: 0.28vh solid var(--neon-red);
+  border-radius: 1.12vh;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   font-weight: bold;
