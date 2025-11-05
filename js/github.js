@@ -32,7 +32,7 @@ async function fetchSpecificRepos() {
     const repoList = [
       "alk222/Ingenieria-Informatica-UCM", 
       "alk222/cv", 
-      "alk222/Configs-macros-dotfiles", 
+      "alk222/dotfiles", 
       "FratosVR/tfg"
     ];
     
